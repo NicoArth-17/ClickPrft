@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+:root
+{
+  --font-titulo: 'The Nautigal', cursive;
+  --font-principal: 'Merriweather', serif;
+  --font-secundaria: 'Asap', sans-serif;
+  --font-geral: 'Nunito', sans-serif;
+
+  --cor1: #FBCBCF;
+  --cor3: #FA7F8A;
+  --cor5: #85030D;
+}
+
+body{
+  font-family: var(--font-geral);
+  color: #1c1c1c;
+  background-color: var(--cor1);
+}
+
+h1
+{
+  font-family: var(--font-principal), var(--font-secundaria);
+  font-size: 62px;
+}
+
+h2{
+  font-family: var(--font-secundaria);
+  color: #000000;
+  text-decoration: underline;
+}
+
+h3
+{
+  font-family: var(--font-secundaria);
+  font-weight: bolder;
+}
+
+.botao{
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: var(--cor5);
+  font-size: .9em;
+  border-radius: 3px;
+  }
+
+
+
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--cor5);
+}
+
+nav > a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 32px;
+  justify-content: space-between;
+  font-family: var(--font-titulo);
+}
+
+nav li
+{
+  background-color: rgb(32, 32, 32);
+  margin: auto 5px;
+  border-radius: 0px 21px ;
+  border: px solid var(--cor1);
+  padding: 3px 0px;
+}
+
+nav li:hover
+{
+  background-color: var(--cor3);
+  border: 2px solid black;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+nav ul li{
+  text-align: center;
+  width: 100%;
+}
+
+nav ul li a{
+  display: inline-block;
+  display: 10px 0;
+  width: 100%;
+  text-decoration: none;
+  color:#ffffff;
+}
+
+nav > ul > li > a:hover
+{
+  color: black;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('../imagens/camera.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:#ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1{
+  color:#ffffff;
+}
+
+header p{
+  margin-bottom: 2em;
+}
+
+#sobre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px 10px 20px 20px;
+  background-color: var(--cor5);
+  color: #ffffff;
+}
+
+#sobre h2{
+  color: #ffffff;
+}
+
+#sobre p{
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+}
+
+#sobre .botao{
+  background-color: #f1f1f1;
+  color:#1c1c1c;
+}
+
+#serviços{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin: 40px auto;
+  }
+
+  #serviços div{
+  display: inline-block;
+  background-color: white;
+  margin: auto 20px;
+  height: 300px;
+  border-radius: 15px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  }
+
+  #serviços > div > img
+  {
+    margin-top: 20px;
+  }
+
+  #fotos{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  }
+
+  #fotos h2{
+    margin-bottom: 20px;
+
+  }
+
+  #fotos img{
+    width: 100%;
+  }
+
+  #contato{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  }
+
+  #contato h2{
+    color: #000000;
+  }
+
+  footer{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cor5);
+    color: #ffffff;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    border: solid black;
+    border-radius: 20px;
+    padding: 0px 3px;
+  }
+
+  footer a:hover
+  {
+    background-color: var(--cor3);
+  }
+
+  @media screen and (min-width:768px){
+
+    nav{
+
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    nav ul{
+      flex-direction: row;
+      width: 70%;
+    }
+
+    header{
+      height: 600px;
+      height: 60vh;
+      justify-content: center;
+
+    }
+
+    #sobre{
+      height: 250px;
+      height: 30vh;
+      justify-content: center;
+      min-height: 250px;
+    }
+
+    #serviços{
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #serviços h2{
+      text-align: center;
+      width: 100%;
+
+    }
+
+    #serviços div{
+      flex-grow: 1;
+      flex-basis: 150px;
+      padding: 0 10px;      
+    }
+
+    #fotos{
+      flex-direction: row;
+      flex-wrap: wrap;
+      }
+
+    #fotos h2{
+      width: 100%;
+      text-align: center;
+    }
+
+    #fotos img{
+      width: 33.3333333%;
+      max-height: 990px;
+      margin: 0px;
+    }
+
+    #contato{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      max-width: 500px;
+      margin: 0 auto;
+
+    }
+
+    #contato h2, #contato p{
+      width: 100%;
+      
+    }
+
+    
+  }
