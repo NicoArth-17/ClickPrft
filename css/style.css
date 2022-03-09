@@ -62,13 +62,12 @@ nav > a{
   font-size: 32px;
   justify-content: space-between;
   font-family: var(--font-titulo);
-  margin: 3px;
 }
 
 nav li
 {
   background-color: rgb(32, 32, 32);
-  margin: auto 5px;
+  margin: 5px;
   border-radius: 0px 21px ;
   border: px solid var(--cor1);
   padding: 3px 0px;
